@@ -20,6 +20,15 @@ ipv6审核被拒解决方案
 
 2.不配置ipv6；其实就是配置好一个域名，苹果审核的时候，是ipv6-only环境，所以，首先是向dns服务器，请求，如果能获取到ipv6；就直接访问；不能，就通过nat64网络，转换成ipv4的环境；
 
-可以用这个命令测试，是否支持：dig +nocmd +nostats example.com AAAA
+
+可以用这个命令测试，终端敲命令行：dig +nocmd +nostats example.com AAAA
 
 
+
+Got answer:
+
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR,
+
+
+
+这里的states，要是noerror
